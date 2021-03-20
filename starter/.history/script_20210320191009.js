@@ -213,7 +213,7 @@ const startLogOutTimer = function () {
   };
 
   // Set time to 5 minutes
-  let time = 120;
+  let time = 10;
 
   // Call the timer every second
   tick();
@@ -268,8 +268,7 @@ btnLogin.addEventListener('click', function (e) {
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
 
-    clearInterval(timer);
-    timer = startLogOutTimer();
+    startLogOutTimer();
 
     // Update UI
     updateUI(currentAccount);
